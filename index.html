@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/sitio.webmanifest" />
     <!-- <link rel="canonical" href="https://enflujo.com" /> -->
 
-    <title>..:: EnFlujo ::..</title>
+    <title>Plant Life</title>
     <!-- <meta name="description" content="Descripción del sitio...." /> -->
 
     <!-- OpenGraph -->
@@ -35,9 +34,40 @@
     <!-- <meta name="twitter:image:alt" content="Texto que describe la imagen" /> -->
   </head>
   <body>
+    <nav>
+      <a href="shop.html">shop</a>
+      <a href="about.html">about</a>
+      <a href="help.html">help</a>
+      <a href="blog.html">blog</a>
+    </nav>
 
+    <main>
+      <a href="" class="toggle-nav">
+        <img src="/assets/menu.svg" alt="menu" />
+        Menu
+      </a>
 
-    
-    <script type="module" src="/src/programa.ts"></script>
+      <section>
+        <div class="slides">
+          <img src="/assets/plant1.jpg" alt="plant1" />
+          <img src="/assets/plant2.jpg" alt="plant2" />
+          <img src="/assets/plant3.jpg" alt="plant3" />
+          <img src="/assets/plant4.jpg" alt="plant4" />
+          <img src="/assets/plant5.jpg" alt="plant5" />
+        </div>
+
+        <div class="content">
+          <h1>Plant set</h1>
+          <p>
+            This beginner plant set, containing 6 succulents, 3 cacti, and 2 trees is aimed at sprucing up your
+            apartment. It's suitable for places with both bright and low access to sunlight. Each plant comes with it's
+            own perfect plant pot.
+          </p>
+          <a href="shop.html" class="button"> Buy for $599</a>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
