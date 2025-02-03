@@ -1,6 +1,16 @@
 @use './base.scss' as *;
 @use './variables' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: 'IBM Plex Mono';
   src: url(/assets/ibm-plex-mono.woff), url(/assets/ibm-plex-mono.woff2);
@@ -9,6 +19,13 @@
 @font-face {
   font-family: 'Young Serif';
   src: url(/assets/youngserif.woff), url(/assets/youngserif.woff2);
+}
+
+@font-face {
+  font-family: 'Uchen', serif;
+  src: url(https://fonts.googleapis.com/css2?family=Uchen&display=swap);
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -42,6 +59,10 @@ nav a {
   color: var(--textColorInverted);
   text-decoration: none;
   margin: 5px 32px 5px 32px;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -87,8 +108,10 @@ section div {
 
 h1 {
   font-family: var(--fontTitles);
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: 3.5em;
+  line-height: 0.5;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 p {
@@ -113,8 +136,48 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  transition:
+    transform 0.5s,
+    box-shadow 0.5s;
 }
 
 .slides img:first-child {
   z-index: 1;
+}
+
+.slides:hover img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  right: 200px;
+}
+.about {
+  width: 40%;
+  position: relative;
+  right: 40%;
+}
+
+.store img {
+  position: relative;
+  top: 0;
+  left: 43%;
+  width: 35%;
+  height: auto;
+}
+
+.logo {
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 0; /* Positions it at the top of the viewport */
+  right: 0;
+  margin: 33px 40px 0 0;
+
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 1.3em;
 }

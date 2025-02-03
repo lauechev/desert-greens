@@ -22,6 +22,30 @@ slideArea?.addEventListener('click', function () {
   }
   z = z + 1;
 
+  // remove animation from the style for every image
+  images.forEach((image) => {
+    image.style.animation = '';
+  });
+
   //pick the right image
   images[currentSlide].style.zIndex = z;
+  images[currentSlide].style.animation = 'fade 0.5s';
+});
+
+// when i put my mouse over slide area, put all of the images in a radom place
+
+slideArea?.addEventListener('mouseover', function () {
+  images?.forEach((image) => {
+    const x = 25 * Math.floor(Math.random() * 5) - 50; //snapping to grid
+    const y = 25 * Math.floor(Math.random() * 5) - 50;
+
+    image.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
+
+//when i move my mouse away, put the images back.
+slideArea?.addEventListener('mouseout', function () {
+  images?.forEach((image) => {
+    image.style.transform = '';
+  });
 });
