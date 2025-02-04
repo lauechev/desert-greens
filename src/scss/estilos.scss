@@ -150,6 +150,7 @@ p {
   height: 100vh;
   right: 200px;
 }
+
 .about {
   width: 40%;
   position: relative;
@@ -175,4 +176,110 @@ p {
 
 .logo h1 {
   font-size: 1.3em;
+}
+
+/* Tablets en vertical y móviles grandes */
+@media (max-width: 850px) {
+  section {
+    flex-direction: column; /* Ensure the order stays */
+  }
+  body {
+    font-size: 0.95em;
+  }
+  h1 {
+    font-size: 2.7em;
+  }
+
+  section div {
+    width: 250px;
+  }
+  .slides img {
+    height: 350px;
+    width: auto;
+    top: 5vh;
+    left: 0;
+  }
+
+  .content {
+    margin: 0 0 0 0px;
+    width: 60vw;
+  }
+
+  .button {
+    position: relative;
+    left: -12vh;
+  }
+
+  .about {
+    width: 60%;
+    top: 12vh;
+    left: 0vw;
+  }
+
+  .store img {
+    position: relative;
+    top: 4vh;
+    left: 0vw;
+    width: 40%;
+    height: auto;
+  }
+}
+
+@media (max-height: 845px) {
+  section {
+    padding: 10px 0 30px 0;
+  }
+  .slides img {
+    height: 300px;
+    width: auto;
+    top: 13vh;
+    left: 0;
+  }
+
+  .content {
+    margin: 0 0 0 0px;
+    width: 60vw;
+  }
+
+  .button {
+    position: relative;
+    left: 18vw;
+  }
+
+  .store {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 0.8em;
+  }
+  h1 {
+    font-size: 2.7em;
+  }
+
+  .slides img {
+    height: 300px;
+    width: auto;
+    top: 10vh;
+    left: 0;
+  }
+
+  .about {
+    width: 60%;
+    top: 12vh;
+    left: 0vw;
+  }
+
+  .store img {
+    position: relative;
+    top: 4vh;
+    left: 0vw;
+    width: 50%;
+    height: auto;
+  }
 }
